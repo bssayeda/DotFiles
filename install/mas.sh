@@ -9,7 +9,7 @@ cd mas
 
 ./script/build
 
-cp ./build/mas /opt/local/bin
+sudo cp ./build/mas /opt/local/bin
 
 cd $current_working_directory
 

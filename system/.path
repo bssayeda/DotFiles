@@ -2,7 +2,6 @@
 # Retrieve it from getconf, otherwise it's just current $PATH
 
 is-executable getconf && PATH=$(`command -v getconf` PATH)
-is-executable getconf && MANPATH=$(`command -v getconf` MANPATH)
 
 # Prepend new items to path (if directory exists)
 
@@ -19,17 +18,11 @@ prepend-path "/usr/sbin"
 prepend-path "/usr/local/sbin"
 prepend-path "$HOME/.rvm/bin"
 
-# Configure MANPATH
-
-prepend-manpath "/opt/local/share/man"
-
 # Remove duplicates (preserving prepended items)
 # Source: http://unix.stackexchange.com/a/40755
 
 PATH=`echo -n $PATH | awk -v RS=: '{ if (!arr[$0]++) {printf("%s%s",!ln++?"":":",$0)}}'`
-MANPATH=`echo -n $MANPATH | awk -v RS=: '{ if (!arr[$0]++) {printf("%s%s",!ln++?"":":",$0)}}'`
 
 # Wrap up
 
 export PATH
-export MANPATH

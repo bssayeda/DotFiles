@@ -34,10 +34,13 @@ apps=(
     rbenv
     ruby-build
     coreutils
-    python
-    npm
+    python34
+    py34-pip
+    npm5
 )
 
 sudo /opt/local/bin/port install "${apps[@]}"
+sudo /opt/local/bin/port select --set python python34
+sudo /opt/local/bin/port select --set pip pip34
 
 cd $current_working_directory
