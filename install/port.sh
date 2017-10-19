@@ -1,17 +1,3 @@
-# Installing MacPorts and other command line tools.
-
-current_working_directory=$(pwd)
-
-# Download MacPorts.
-cd $TMPDIR
-curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.4.1.tar.bz2
-tar xf MacPorts-2.4.1.tar.bz2
-
-cd MacPorts-2.4.1/
-./configure
-make
-sudo make install
-
 # Install command-line tools with MacPorts.
 
 # Update MacPorts
@@ -37,10 +23,10 @@ apps=(
     python34
     py34-pip
     npm5
+    cowsay
+    fortune
 )
 
 sudo /opt/local/bin/port install "${apps[@]}"
 sudo /opt/local/bin/port select --set python python34
 sudo /opt/local/bin/port select --set pip pip34
-
-cd $current_working_directory
