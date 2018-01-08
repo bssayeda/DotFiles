@@ -18,9 +18,6 @@ do
     esac
 done
 
-echo "EMAIL: ${EMAIL}"
-echo "NAME: ${NAME}"
-
 if [[ -z "$NAME" && -z "$EMAIL" ]];
 then
     echo "Missing name and email to set for .gitconfig!"
@@ -58,8 +55,8 @@ if is-executable git -a -d "$DOTFILES_DIR/.git"; then git --work-tree="$DOTFILES
 
 # Update .gitconfig with command line 
 
-sed -i "s/NAME_HERE/${NAME}/g" "$DOTFILES_DIR/git/.gitconfig"
-sed -i "s/EMAIL_HERE/${EMAIL}/g" "$DOTFILES_DIR/git/.gitconfig"
+sed -i '.bak' "s/NAME_HERE/${NAME}/g" $DOTFILES_DIR/git/.gitconfig
+sed -i '.bak' "s/EMAIL_HERE/${EMAIL}/g" $DOTFILES_DIR/git/.gitconfig
 
 # Setup symlinks
 
