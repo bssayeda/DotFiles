@@ -1,6 +1,6 @@
 [user]
-  name = Bilal S. Sayed Ahmad
-  email = webmaster@bilalsayed.net
+  name = NAME_HERE
+  email = EMAIL_HERE
 
 [core]
   excludesfile = ~/.gitignore_global

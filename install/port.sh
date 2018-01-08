@@ -25,6 +25,7 @@ apps=(
     npm5
     cowsay
     fortune
+    unar
 )
 
 sudo /opt/local/bin/port install "${apps[@]}"
