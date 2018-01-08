@@ -18,6 +18,9 @@ do
     esac
 done
 
+echo "EMAIL: ${EMAIL}"
+echo "NAME: ${NAME}"
+
 if [[ -z "$NAME" && -z "$EMAIL" ]];
 then
     echo "Missing name and email to set for .gitconfig!"
