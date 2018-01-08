@@ -13,5 +13,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew update
 brew upgrade
 
+# Install bash-git-prompt
+brew install bash-git-prompt
+
 # Add tap for additional versions of certain apps.
 brew tap caskroom/versions
