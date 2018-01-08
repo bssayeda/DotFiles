@@ -44,10 +44,13 @@ fi
 export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Make utilities available
+
+PATH="$DOTFILES_DIR/bin:$PATH"
+
 # Common functions
 
 . "$DOTFILES_DIR/system/.function"
-. "$DOTFILES_DIR/system/.function_network"
 
 # Update dotfiles itself first
 
